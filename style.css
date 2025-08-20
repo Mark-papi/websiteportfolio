@@ -24,6 +24,8 @@ body, html, nav, main,footer, .col_1, .col_2 {
     margin:20px;
     background-color: #eeeeee;
     border: 1px solid #4a4e69;
+    border-radius: 18px; /* προσθέτει στρογγυλεμένες γωνίες */
+    transition: box-shadow 0.3s, transform 0.3s;
     
 }
 
@@ -137,9 +139,59 @@ body {
     transform: scale(1.05);
 }
 
-/* Remove position: fixed from .footer */
+.dark_mode_btn {
+    margin-left: auto;
+    /* Μεταφέρει το κουμπί στη δεξιά πλευρά */
+}
+
+#darkModeToggle {
+    background-color: #4a4e69;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 10px 28px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(74, 78, 105, 0.15);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+#darkModeToggle:hover {
+    background-color: #9a8c98;
+    color: #22223b;
+    transform: scale(1.08);
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #222831;
+    color: #eeeeee;
+}
+
+.dark-mode .navbar {
+    background-color: #22223b;
+    color: #eeeeee;
+}
+
+.dark-mode .col_1,
+.dark-mode .col_2,
+.dark-mode .cards,
+.dark-mode .skills,
+.dark-mode .contact-info,
+.dark-mode .download-cv-container,
+.dark-mode .footer,
+.dark-mode h1,
+.dark-mode h2 {
+    background-color: #393e46;
+    color: #eeeeee !important;
+}
+
+.dark-mode a {
+    color: #00adb5;
+}
+
 .footer {
-    /* position: fixed;  <-- REMOVE THIS LINE */
     width: 100%;
     background-color: #222831;
     text-align: center;
